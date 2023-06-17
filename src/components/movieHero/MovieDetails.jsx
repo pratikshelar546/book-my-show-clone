@@ -1,22 +1,22 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { MovieContext } from "../../context/Movie.context";
 
 const MovieDetails =()=>{
     const{Movie} = useContext(MovieContext);;
-    const [isOpen ,setIsOpen] =useState(false);
-    const [price,setPrice] = useState(0);
+    // const [isOpen ,setIsOpen] =useState(false);
+    // const [price,setPrice] = useState(0);
     const genres = Movie.genres?.map(({name})=>name).join(", ");
     const language = Movie.spoken_languages
     ?.map(({ english_name }) => english_name)
     .join(", ");
-    const RentMovie = ()=>{
-    setIsOpen(true);
-    setPrice(149);
-}
-const BuyMovie =()=>{
-    setIsOpen(true);
-    setPrice(599);
-}
+//     const RentMovie = ()=>{
+//     setIsOpen(true);
+//     setPrice(149);
+// }
+// const BuyMovie =()=>{
+//     setIsOpen(true);
+//     setPrice(599);
+// }
     return<>
         <section className="flex items-center" >
         <img src="https://in.bmscdn.com/moviemode/tvod/premiere-tag.png" alt="premiere"className="rounded-lg cursor-pointer" style={{width:"90px" ,height:"20px"}} />

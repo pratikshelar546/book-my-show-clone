@@ -6,7 +6,7 @@ import { MovieContext } from "../context/Movie.context";
 import MovieLayout from "../layout/MovieLayout";
 import { FaCcVisa, FaCcApplePay } from "react-icons/fa";
 import PosterSliderComp from "../components/PosterSlider/PosterSliderComp";
-import MovieNavbar from "../components/navbar/MovieNavbar";
+// import MovieNavbar from "../components/navbar/MovieNavbar";
 import MovieHeroComp from "../components/movieHero/MovieHeroComp";
 import CastInfo from "../Cast/CastInfo";
 const Moviepage = () => {
@@ -86,7 +86,7 @@ const Moviepage = () => {
     };
     requestSimilarMovie();
     // console.log(casts);
-  }, [id]);
+  }, [id , similars]);
   useEffect(() => {
     const requestRecommended = async () => {
       const getrecommended = await axios.get(`/movie/${id}/recommendations`);
@@ -100,7 +100,7 @@ const Moviepage = () => {
       setMovie(getMovieData.data);
     };
     requestMovie();
-  }, [id]);
+  },[id, setMovie]);
   return (
     <>
       {/* <MovieNavbar/> */}

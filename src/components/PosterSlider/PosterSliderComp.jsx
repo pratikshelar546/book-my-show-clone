@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import PosterComponent from "../../poster/PosterComponent";
 
 const PosterSliderComp = (props) => {
-  const { title, subTitle, isDark, posters ,config} = props;
+  const { title, isDark, posters } = props;
   const settings = {
     infinite: false,
     autoplay: false,
